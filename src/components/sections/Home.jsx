@@ -4,10 +4,28 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative"
+      className="min-h-screen flex items-center justify-center relative bg-cover bg-center"
+      //style={{
+      // backgroundImage: `url('/itallotech-portfolio/img/bg-image-home.jpg')`,
+      //}}
     >
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source
+          src={`${import.meta.env.BASE_URL}videos/video-homepage.mp4`}
+          type="video/mp4"
+        />
+      </video>
+
+      <div className="absolute inset-0 bg-black/50 z-0" />
+
       <RevealOnScroll>
-        <div className="text-center z-10 px-4">
+        <div className="text-center z-10 px-4 ">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
             Hi, I'm Itallo Siqueira
           </h1>
