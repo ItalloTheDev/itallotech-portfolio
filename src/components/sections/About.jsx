@@ -147,6 +147,17 @@ export const About = () => {
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transintion-all">
               <h3 className="text-xl font-bold mb-4"> 💼 Work Experience </h3>
               <div className="space-y-4 text-gray-300">
+                {/* Job FREELANCER DEVELOPER */}
+                <div className="">
+                  <h4 className="font-semibold">Freelancer (2025 - Present)</h4>
+                  <p>
+                    Working as a freelance developer, providing web solutions to
+                    small businesses and personal clients.
+                  </p>
+                </div>
+
+                {/* Job FREELANCER DEVELOPER END */}
+
                 {/* Job JAVALI SOFTWARE DEVELOPER */}
                 <div className="">
                   <h4 className="font-semibold">

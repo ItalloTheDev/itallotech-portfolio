@@ -12,7 +12,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             href="#home"
             className="flex justify-normal font-mono text-xl font-bold text-white"
           >
-            Ítallo<span className="text-blue-500">.Siqueira</span>
+            Itallo<span className="text-blue-500">.Tech</span>
           </a>
 
           <div
@@ -37,13 +37,13 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               {" "}
               About{" "}
             </a>
-            <a
+            {/*         <a
               href="#projects"
               className="text-gray-400 hover:text-white transition-colors"
             >
               {" "}
               Projects{" "}
-            </a>
+            </a>*/}
             <a
               href="#contact"
               className="text-gray-400 hover:text-white transition-colors"
