@@ -10,8 +10,6 @@ import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
 import { ParallaxProvider } from "react-scroll-parallax";
 
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
