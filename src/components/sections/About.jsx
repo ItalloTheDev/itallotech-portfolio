@@ -1,5 +1,6 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 export const About = () => {
   const { t } = useTranslation();

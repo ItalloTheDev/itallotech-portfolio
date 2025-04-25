@@ -1,13 +1,23 @@
+import { useEffect, useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import { useTranslation } from "react-i18next";
 
 export const Home = () => {
   const { t } = useTranslation();
+  const [offsetY, setOffsetY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setOffsetY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative bg-cover bg-center"
+      className="min-h-screen flex items-center justify-center relative bg-cover bg-center overflow-hidden"
       //style={{
       // backgroundImage: `url('/itallotech-portfolio/img/bg-image-home.jpg')`,
       //}}
@@ -17,7 +27,8 @@ export const Home = () => {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0 transition-transform duration-300 ease-out"
+        style={{ transform: `translateY(${offsetY * 0.3}px)` }}
       >
         <source
           src={`${import.meta.env.BASE_URL}videos/video-homepage.mp4`}
@@ -25,10 +36,10 @@ export const Home = () => {
         />
       </video>
 
-      <div className="absolute inset-0 bg-black/50 z-0" />
+      <div className="absolute inset-0 bg-black/30 z-0" />
 
       <RevealOnScroll>
-        <div className="text-center z-10 px-4 ">
+        <div className="text-center z-20 px-4 ">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
             {t("home.title")}
           </h1>
