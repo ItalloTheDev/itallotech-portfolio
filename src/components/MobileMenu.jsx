@@ -1,16 +1,22 @@
-import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
+  const { i18n } = useTranslation();
+  const language = i18n.language;
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out
-        
-                    ${
-                      menuOpen
-                        ? "h-screen opacity-100 pointer-events-auto"
-                        : "h-0 opacity-0 pointer-events-none"
-                    }
-        `}
+      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.90)] z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out
+        ${
+          menuOpen
+            ? "h-screen opacity-100 pointer-events-auto"
+            : "h-0 opacity-0 pointer-events-none"
+        }
+      `}
     >
       <button
         onClick={() => setMenuOpen(false)}
@@ -19,50 +25,46 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       >
         &times;
       </button>
-      <a
-        href="#home"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+
+      {["home", "about", "projects", "contact"].map((section, index) => (
+        <a
+          key={index}
+          href={`#${section}`}
+          onClick={() => setMenuOpen(false)}
+          className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${
               menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }
-            `}
-      >
-        Home
-      </a>
-      <a
-        href="#about"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }
-            `}
-      >
-        About
-      </a>
-      <a
-        href="#projects"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }
-            `}
-      >
-        Projects
-      </a>
-      <a
-        href="#contact"
-        onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-            ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }
-            `}
-      >
-        Contact
-      </a>
+          `}
+        >
+          {section.charAt(0).toUpperCase() + section.slice(1)}
+        </a>
+      ))}
+
+      {/* Seletor de Idioma */}
+      <div className="flex space-x-2 mt-6">
+        <button
+          onClick={() => changeLanguage("en")}
+          className={`transition-colors duration-300 cursor-pointer ${
+            language === "en"
+              ? "text-white font-semibold"
+              : "text-gray-400 hover:text-white"
+          }`}
+        >
+          EN
+        </button>
+        <span className="text-gray-600">|</span>
+        <button
+          onClick={() => changeLanguage("pt")}
+          className={`transition-colors duration-300 cursor-pointer ${
+            language === "pt"
+              ? "text-white font-semibold"
+              : "text-gray-400 hover:text-white"
+          }`}
+        >
+          PT
+        </button>
+      </div>
     </div>
   );
 };

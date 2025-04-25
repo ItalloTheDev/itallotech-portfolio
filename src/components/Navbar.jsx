@@ -1,11 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
 
 export const Navbar = ({ menuOpen, setMenuOpen }) => {
+  const [language, setLanguage] = useState(() => {
+    return localStorage.getItem("language") || "pt";
+  });
+
+  const { t } = useTranslation();
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setLanguage(lang);
+  };
+
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
+
+  useEffect(() => {
+    localStorage.setItem("language", language);
+  }, [language]);
+
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[rgba(10,10,10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
+    <nav className="fixed top-0 w-full z-40 bg-[rgba(10,10,10,0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <a
@@ -27,30 +45,45 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               href="#home"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              {" "}
-              Home{" "}
+              {t("navbar.home")}
             </a>
             <a
               href="#about"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              {" "}
-              About{" "}
+              {t("navbar.about")}
             </a>
-            {/*         <a
-              href="#projects"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              {" "}
-              Projects{" "}
-            </a>*/}
             <a
               href="#contact"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              {" "}
-              Contact{" "}
+              {t("navbar.contact")}
             </a>
+
+            {/* Botões de idioma */}
+            <div className="flex space-x-2 px-2 py-1">
+              <button
+                onClick={() => changeLanguage("en")}
+                className={`transition-colors duration-300 cursor-pointer ${
+                  language === "en"
+                    ? "text-white font-semibold"
+                    : "text-gray-400 hover:text-white"
+                }`}
+              >
+                EN
+              </button>
+              <span className="text-gray-600">|</span>
+              <button
+                onClick={() => changeLanguage("pt")}
+                className={`transition-colors duration-300 cursor-pointer ${
+                  language === "pt"
+                    ? "text-white font-semibold"
+                    : "text-gray-400 hover:text-white"
+                }`}
+              >
+                PT
+              </button>
+            </div>
           </div>
         </div>
       </div>

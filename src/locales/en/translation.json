@@ -1,0 +1,66 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+
+  "home":{
+    "title": "Hi, I'm Itallo Siqueira",
+    "description": "I'm a Fullstack developer focused on building fast, scalable, and user-friendly web apps with React, Node.js, and modern tools.",
+    "contact": "Contact Me",
+    "projects": "Projects"
+  },
+
+  "about": {
+    "title": "About Me",
+    "description": "Fullstack developer who loves building websites. From design to code, I enjoy turning ideas into functional and beautiful web experiences.",
+    "education": {
+      "title": "Education",
+      "udemy": {
+        "course": "React from Zero to Mastery (w/ hooks, router, API, Projects)",
+        "type": "Learning Platform",
+        "details": "Relevant Coursework: React, Firebase, MongoDB, Mongoose ..."
+      },
+      "istec": {
+        "course": "A.A.S. in Mobile App Development at",
+        "university": "ISTEC",
+        "university_name": "Higher Institute of Advanced Technologies",
+        "details": "Relevant Coursework: Web Programming, Databases, Systems Programming ..."
+      },
+      "mpc": {
+        "course": "Professional Course: Management and Programming of Computer Systems",
+        "school_type": "Secondary School",
+        "details": "Relevant Coursework: Computer Systems Programming, Operating Systems, Communication Networks ..."
+      }
+    },
+    "work": {
+      "title": "Work Experience",
+      "freelancer": {
+        "title": "Freelancer",
+        "details": "Working as a freelance developer, providing web solutions to small businesses and personal clients."
+      },
+      "javali": {
+        "title": "Software Developer at",
+        "details": "Collaborated in the development and maintenance of web applications using modern technologies. Assisted with bug fixing, feature implementation, and testing, contributing to real-world software solutions."
+      },
+      "blasting": {
+        "title": "Web Developer - Full-Stack at",
+        "details": "FRONTEND and BACKEND development of the company's main website for future use. Using pure programming languages such as PHP and SQL."
+      },
+      "a2it": {
+      "title": "Intern at",
+      "details": "Worked with VisualFox and legacy data systems to integrate internal tools. This experience strengthened my ability to work across the full stack."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Name...",
+    "email": "example@gmail.com",
+    "message": "Your Message...",
+    "send": "Send Message"
+  }
+}
+

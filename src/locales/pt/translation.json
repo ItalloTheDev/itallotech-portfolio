@@ -1,0 +1,66 @@
+{
+    "navbar": {
+      "home": "Início",
+      "about": "Sobre",
+      "projects": "Projetos",
+      "contact": "Contato"
+    },
+  
+    "home":{
+      "title": "Olá, sou Ítallo Siqueira",
+      "description": "Sou um programador Fullstack focado na criação de aplicações web rápidas, bem estruturadas e fáceis de usar com React, Node.js e ferramentas modernas.",
+      "contact": "Enviar mensagem",
+      "projects": "Projetos"
+    },
+
+    "about": {
+      "title": "Sobre Mim",
+      "description": "Desenvolvedor Fullstack que adora criar websites. Do design ao código, gosto de transformar ideias em experiências web funcionais e bonitas.",
+      "education": {
+        "title": "Formação Acadêmica",
+        "udemy": {
+          "course": "React do Zero à Maestria (com hooks, router, API, Projetos)",
+          "type": "Plataforma de Aprendizagem",
+          "details": "Disciplinas Relevantes: React, Firebase, MongoDB, Mongoose ..."
+          },
+        "istec": {
+          "course": "Técnico Superior em Desenvolvimento de Aplicações Móveis",
+          "university": "ISTEC",
+          "university_name": "Instituto Superior de Tecnologias Avançadas",
+          "details": "Disciplinas Relevantes: Programação Web, Bases de Dados, Programação de Sistemas ..."
+        },
+        "mpc": {
+          "course": "Curso Profissional: Gestão e Programação de Sistemas Informáticos",
+          "school_type": "Ensino Secundário",
+          "details": "Disciplinas Relevantes: Programação de Sistemas Informáticos, Sistemas Operativos, Redes de Comunicação ..."
+        }
+      },
+      "work": {
+      "title": "Experiência Profissional",
+      "freelancer": {
+        "title": "Freelancer",
+        "details": "Atuando como desenvolvedor freelancer, oferecendo soluções web para pequenas empresas e clientes individuais."
+      },
+      "javali": {
+        "title": "Desenvolvedor de Software na",
+        "details": "Colaborei no desenvolvimento e manutenção de aplicações web utilizando tecnologias modernas. Auxiliei na correção de bugs, implementação de funcionalidades e testes, contribuindo para soluções reais de software."
+      },
+      "blasting": {
+        "title": "Desenvolvedor Web - Full-Stack na",
+        "details": "Desenvolvimento FRONTEND e BACKEND do website principal da empresa para uso futuro. Utilizando linguagens de programação puras como PHP e SQL."
+      },
+      "a2it": {
+        "title": "Estagiário na",
+        "details": "Trabalhei com VisualFox e sistemas de dados legados para integrar ferramentas internas. Essa experiência fortaleceu minha capacidade de atuar em toda a stack de desenvolvimento."
+      }
+    }  
+  },
+  "contact": {
+    "title": "Entrar Em Contato",
+    "name": "Nome...",
+    "email": "exemplo@gmail.com",
+    "message": "Sua Mensagem...",
+    "send": "Enviar Mensagem"
+  }
+
+}

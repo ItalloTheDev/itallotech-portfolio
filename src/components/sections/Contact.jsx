@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
+import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,15 +35,16 @@ export const Contact = () => {
         backgroundImage: `url('${
           import.meta.env.BASE_URL
         }img/contact-image.jpg')`,
+        backgroundAttachment: "fixed",
       }}
-      className="relative min-h-screen flex items-center justify-center py-20 bg-cover bg-center"
+      className="relative min-h-screen flex items-center justify-center py-20 bg-cover bg-scroll bg-bottom bg-no-repeat shadow-lg"
     >
       <div className="absolute inset-0 bg-black/65 z-0"></div>{" "}
       {/* opcional para escurecer o fundo */}
       <RevealOnScroll>
         <div className="px-4 w-full max-w-4xl mx-auto relative z-10">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            Get In Touch
+            {t("contact.title")}
           </h2>
           <form
             action=""
@@ -56,7 +59,7 @@ export const Contact = () => {
                 required
                 value={formData.name}
                 className="w-full bg-white/5 border border-white/10 rounded px-6 py-4 text-white text-lg transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="Name..."
+                placeholder={t("contact.name")}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
@@ -71,7 +74,7 @@ export const Contact = () => {
                 required
                 value={formData.email}
                 className="w-full bg-white/5 border border-white/10 rounded px-6 py-4 text-white text-lg transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="example@gmail.com"
+                placeholder={t("contact.email")}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
@@ -86,7 +89,7 @@ export const Contact = () => {
                 value={formData.message}
                 rows={6}
                 className="w-full bg-white/5 border border-white/10 rounded px-6 py-4 text-white text-lg transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="Your Message..."
+                placeholder={t("contact.message")}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
@@ -98,7 +101,7 @@ export const Contact = () => {
                 type="submit"
                 className="w-full bg-blue-500 text-white py-4 px-6 rounded font-semibold text-lg transition relative overflow-hidden cursor-pointer hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
               >
-                Send Message
+                {t("contact.send")}
               </button>
             </div>
           </form>
