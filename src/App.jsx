@@ -1,3 +1,5 @@
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 import { useState } from "react";
 import "./App.css";
 import { LoadingScreen } from "./components/LoadingScreen";
