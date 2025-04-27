@@ -30,10 +30,7 @@ export const Home = () => {
         className="absolute top-0 left-0 w-full h-full object-cover z-0 transition-transform duration-300 ease-out"
         style={{ transform: `translateY(${offsetY * 0.3}px)` }}
       >
-        <source
-          src={`${import.meta.env.BASE_URL}videos/video-homepage.mp4`}
-          type="video/mp4"
-        />
+        <source src="/videos/video-homepage-2.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/30 z-0" />

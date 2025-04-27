@@ -26,8 +26,18 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     <nav className="fixed top-0 w-full z-40 bg-[rgba(10,10,10,0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <a className="flex justify-normal font-mono text-xl font-bold text-white">
-            Itallo<span className="text-blue-500">.Tech</span>
+          <a
+            href="#home"
+            className="flex items-center font-mono text-xl font-bold text-white space-x-2"
+          >
+            <img
+              src="/img/logo.png"
+              alt="logotipo"
+              className="w-9 h-9 object-contain translate-x-[5px]"
+            />
+            <span className="leading-none">
+              Itallo<span className="text-blue-500">.Tech</span>
+            </span>
           </a>
 
           <div

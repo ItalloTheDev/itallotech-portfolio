@@ -32,7 +32,7 @@ export const Contact = () => {
     <ParallaxBanner
       layers={[
         {
-          image: `${import.meta.env.BASE_URL}img/contact-image.jpg`,
+          image: "/img/contact-image-2.jpg",
           speed: -40,
         },
       ]}

@@ -18,10 +18,12 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden"
     >
+      {/* Background Logo */}
+      <div className="hidden lg:block absolute inset-0 pointer-events-none opacity-5 bg-no-repeat bg-cover bg-[position:right_center] bg-[url('/img/logo.png')] filter grayscale" />
       <RevealOnScroll>
-        <div className="max-w-3xl mx-auto px-4">
+        <div className="relative max-w-3xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             {t("about.title")}
           </h2>
