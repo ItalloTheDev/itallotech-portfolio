@@ -37,7 +37,7 @@ export const Home = () => {
 
       <RevealOnScroll>
         <div className="text-center z-20 px-4 ">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-transparent leading-right">
             {t("home.title")}
           </h1>
 

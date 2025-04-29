@@ -42,7 +42,7 @@ export const Contact = () => {
         id="contact"
         className="relative min-h-screen flex items-center justify-center py-20 bg-cover bg-bottom bg-no-repeat shadow-lg"
       >
-        <div className="absolute inset-0 bg-black/65 z-0"></div>
+        <div className="absolute inset-0 bg-black/80 z-0"></div>
         <RevealOnScroll>
           <div className="px-4 w-full max-w-4xl mx-auto relative z-10">
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
