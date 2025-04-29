@@ -37,4 +37,4 @@ Then open http://localhost:5173 in your browser.
 Feel free to reach out via itallotech.com
 
 📸 Preview
-![Preview](public/img/preview.png)
+![Preview](https://github.com/ItalloTheDev/itallotech-portfolio/blob/main/public/img/preview.png?raw=true)
