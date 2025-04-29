@@ -1,12 +1,32 @@
-# React + Vite
+# ItalloTech Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my first personal portfolio website!  
+This project showcases my work as a web developer and designer (by now is in progress), featuring selected projects, contact information, and a clean, responsive UI.
 
-Currently, two official plugins are available:
+🌐 [Visit the live website](https://www.itallotech.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- **React** – Front-end library
+- **Vite** – Development and build tool
+- **Tailwind CSS** – Utility-first styling
+- **i18next** – Internationalization support (EN/PT)
+- **Vercel** – Hosting and deployment
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Project Structure
+
+- `src/components/` – Reusable UI components
+- `src/sections/` – Main content sections (Hero, About, Projects, Contact)
+- `src/assets/` – Images and icons
+- `public/` – Static files
+
+## 🛠️ Running Locally
+
+To run this project on your machine:
+
+```bash
+git clone https://github.com/ItalloTheDev/itallotech-portfolio.git
+cd itallotech-portfolio
+npm install
+npm run dev
+```
