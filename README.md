@@ -30,3 +30,8 @@ cd itallotech-portfolio
 npm install
 npm run dev
 ```
+
+Then open http://localhost:5173 in your browser.
+
+📬 Contact
+Feel free to reach out via itallotech.com
