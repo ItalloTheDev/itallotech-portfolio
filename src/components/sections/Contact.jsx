@@ -20,8 +20,7 @@ export const Contact = () => {
       .sendForm(
         import.meta.env.VITE_SERVICES_ID,
         import.meta.env.VITE_TEMPLATE_ID,
-        e.target,
-        import.meta.env.VITE_PUBLIC_KEY
+        e.target
       )
       .then(() => {
         alert("Message Sent!");
